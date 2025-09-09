@@ -71,5 +71,23 @@ namespace PointsBet.Backend.Online.Code.Test
             That(result, Is.EqualTo("'apple', '', 'banana'"));
         }
 
+        [Test]
+        public void Should_Handle_WhitespaceItems()
+        {
+            var result = StringFormatter.ToCommaSepatatedList(new[] { "apple", " ", "banana" }, "'");
+            That(result, Is.EqualTo("'apple', ' ', 'banana'"));
+        }
+
+
+        [Test]
+        public void Should_Handle_LargeArray()
+        {
+            var items = Enumerable.Range(1, 1000).Select(i => $"item{i}").ToArray();
+            var result = StringFormatter.ToCommaSepatatedList(items, "'");
+            That(result.StartsWith("'item1', 'item2', 'item3'"), Is.True);
+            That(result.EndsWith("'item1000'"), Is.True);
+            That(result.Count(c => c == ',') == 999, Is.True);
+        }
+
     }
 }
