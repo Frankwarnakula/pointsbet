@@ -6,9 +6,6 @@ namespace PointsBet.Backend.Online.Code
     {
         public static string ToCommaSepatatedList(string[] items, string quote)
         {
-            // If the array is null or empty, return empty string
-            if (items == null || items.Length == 0)
-                return string.Empty;
 
             // If the array contains a single empty string, return empty string
             if (items.Length == 1 && items[0] == string.Empty)
