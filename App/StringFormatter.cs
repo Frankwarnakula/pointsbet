@@ -14,7 +14,7 @@ namespace PointsBet.Backend.Online.Code
             if (items.Length == 1 && items[0] == string.Empty)
                 return string.Empty;
 
-            return string.Join(", ", items.Select(item => $"{quote}{item}{quote}"));
+            return string.Join(", ", items.Select(item => string.Concat(quote, item, quote)));
         }
     }
 }
