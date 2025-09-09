@@ -89,5 +89,12 @@ namespace PointsBet.Backend.Online.Code.Test
             That(result.Count(c => c == ',') == 999, Is.True);
         }
 
+        [Test]
+        public void Should_Return_EmptyString_When_NullArray()
+        {
+            var result = StringFormatter.ToCommaSepatatedList(null!, "'");
+            That(result, Is.EqualTo(string.Empty));
+        }
+
     }
 }
