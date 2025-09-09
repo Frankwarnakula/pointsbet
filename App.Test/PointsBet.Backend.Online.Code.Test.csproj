@@ -20,4 +20,8 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\App\PointsBet.Backend.Online.Code.csproj" />
+  </ItemGroup>
+
 </Project>

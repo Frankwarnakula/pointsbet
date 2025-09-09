@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace PointsBet_Backend_Online_Code_Test
+namespace PointsBet.Backend.Online.Code
 {
 
     /*
@@ -18,6 +18,9 @@ namespace PointsBet_Backend_Online_Code_Test
         //Code to improve
         public static string ToCommaSepatatedList(string[] items, string quote)
         {
+            if (items == null || items.Length == 0)
+                return string.Empty;
+
             StringBuilder qry = new StringBuilder(string.Format("{0}{1}{0}", quote, items[0]));
 
             if (items.Length > 1)

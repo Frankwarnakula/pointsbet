@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{F6199470-A606-4E69-8BA3-2EB95083CDDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointsBet.Backend.Online.Code", "App\PointsBet.Backend.Online.Code.csproj", "{F6199470-A606-4E69-8BA3-2EB95083CDDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Test", "App.Test\App.Test.csproj", "{5B944A3C-C7F0-4D04-A365-C2638FB5D3B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointsBet.Backend.Online.Code.Test", "App.Test\PointsBet.Backend.Online.Code.Test.csproj", "{5B944A3C-C7F0-4D04-A365-C2638FB5D3B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

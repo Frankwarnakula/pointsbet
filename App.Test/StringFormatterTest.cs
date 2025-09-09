@@ -1,16 +1,25 @@
-﻿namespace App.Test
+﻿using PointsBet.Backend.Online.Code;
+using static NUnit.Framework.Assert;
+using NUnit.Framework;
+
+namespace PointsBet.Backend.Online.Code.Test
 {
-    public class Tests
+    public class StringFormatterTest
     {
-        [SetUp]
-        public void Setup()
+
+        [Test]
+        public void Should_Return_EmptyString_When_EmptyArray_Is_Passed_With_Empty_Quote()
         {
+            var result = StringFormatter.ToCommaSepatatedList(new string[] { }, string.Empty);
+            That(result, Is.EqualTo(string.Empty));
         }
 
         [Test]
-        public void Test1()
+        public void Should_Return_EmptyString_When_EmptyArray_Is_Passed_With_Quote()
         {
-            Assert.Pass();
+            var result = StringFormatter.ToCommaSepatatedList(new string[] { }, "'");
+            That(result, Is.EqualTo(string.Empty));
         }
+
     }
 }
