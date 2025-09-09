@@ -96,5 +96,26 @@ namespace PointsBet.Backend.Online.Code.Test
             That(result, Is.EqualTo(string.Empty));
         }
 
+        [Test]
+        public void Should_Handle_NullQuote_As_EmptyString()
+        {
+            var result = StringFormatter.ToCommaSepatatedList(new[] { "apple", "banana" }, null!);
+            That(result, Is.EqualTo("apple, banana"));
+        }
+
+        [Test]
+        public void Should_Handle_NullItems_InArray_WithQuotes()
+        {
+            var result = StringFormatter.ToCommaSepatatedList(new string[] { "apple", null!, "banana" }, "'");
+            That(result, Is.EqualTo("'apple', '', 'banana'"));
+        }
+
+        [Test]
+        public void Should_Handle_NullItems_InArray_With_NoQuotes()
+        {
+            var result = StringFormatter.ToCommaSepatatedList(new string[] { "apple", null!, "banana" }, null!);
+            That(result, Is.EqualTo("apple, , banana"));
+        }
+
     }
 }
