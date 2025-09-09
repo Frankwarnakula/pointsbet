@@ -117,5 +117,12 @@ namespace PointsBet.Backend.Online.Code.Test
             That(result, Is.EqualTo("apple, , banana"));
         }
 
+        [Test]
+        public void Should_Handle_SpecialCharacters()
+        {
+            var result = StringFormatter.ToCommaSepatatedList(new[] { "a,pple", "ba\"nana", "cherry\n" }, "\"");
+            That(result, Is.EqualTo("\"a,pple\", \"ba\"nana\", \"cherry\n\""));
+        }
+
     }
 }
